@@ -50,8 +50,8 @@ for i=1:a
     end
 end
 
-sprintf('oldSVM测试结果中恶意样本个数=%d\n判别为恶意的个数=%d',cnt+malware_cnt,malware_cnt)
-sprintf('oldSVM测试结果中良性样本个数=%d\n判别为良性的个数=%d',a-(cnt+malware_cnt),benign_cnt)
+sprintf('SVM测试结果中恶意样本个数=%d\n判别为恶意的个数=%d',cnt+malware_cnt,malware_cnt)
+sprintf('SVM测试结果中良性样本个数=%d\n判别为良性的个数=%d',a-(cnt+malware_cnt),benign_cnt)
 
 rightNumber=0;
 for i=1:size(test_target,1)
@@ -61,8 +61,8 @@ for i=1:size(test_target,1)
 end
 % rightNumber = sum(SVMoutput==test_target);
 rightratio=rightNumber/size(test_target,1)*100;
-sprintf('oldSVM准确个数=%d',rightNumber)
-sprintf('oldSVM测试准确率=%0.2f',rightratio)
+sprintf('SVM准确个数=%d',rightNumber)
+sprintf('SVM测试准确率=%0.2f',rightratio)
 
 % hold on;  
 % plot(test_input(:,1),test_input(:,2),'ro','MarkerSize',12);       % testing  
